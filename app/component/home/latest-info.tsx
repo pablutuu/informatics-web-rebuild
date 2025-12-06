@@ -37,7 +37,6 @@ const infoItems = [
 ];
 
 const InfoCard = ({ item }: { item: typeof infoItems[0] }) => {
-    // Basic slug generation: Title to Lowercase, Spaces to Dashes
     const slug = item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
 
     return (
