@@ -85,10 +85,10 @@ export default function LatestInfo() {
                 <h2 className="text-5xl font-bold text-[#0C1B43] mb-4">Info Terbaru</h2>
                 <p className="text-gray-500 text-xl font-light">Dapatkan informasi terbaru seputar kegiatan dan prestasi kami.</p>
             </div>
-            <div className="flex gap-2 items-center text-[#0C1B43] font-medium text-lg group cursor-pointer">
+            <Link href="/news" className="flex gap-2 items-center text-[#0C1B43] font-medium text-lg group cursor-pointer">
                 <span>Lihat Semua</span>
                 <IoMdArrowForward className="group-hover:translate-x-1 transition-transform" />
-            </div>
+            </Link>
         </div>
 
         <div className="relative w-full pause-on-hover">

@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <SmoothScroll>
       <div className="w-full bg-white text-[#1E1E1E]">
-        <Navbar />
 
         {/* Hero Section */}
         <section className="relative w-full h-screen overflow-hidden flex items-center justify-center">
@@ -69,8 +68,6 @@ export default function Home() {
 
         {/* New Latest Info Marquee Section */}
         <LatestInfo />
-
-        <Footer />
       </div>
     </SmoothScroll>
   );
