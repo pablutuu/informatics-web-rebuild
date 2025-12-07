@@ -21,7 +21,6 @@ export default function OrganizationCard({
         offset: ["start end", "end start"],
     });
 
-    // --- LOGIKA ANIMASI SCROLL ---
     const isOdd = number % 2 !== 0;
 
     const leftPos = useTransform(
@@ -44,7 +43,6 @@ export default function OrganizationCard({
         [0, 1, 1, 0]
     );
 
-    // --- DEFINISI VARIANTS ---
     const imageVariants: Variants = {
         hidden: { 
             opacity: 0, 
@@ -74,7 +72,6 @@ export default function OrganizationCard({
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="w-full max-w-[1320px] relative"
                 >
-                    {/* Background Square */}
                     <motion.div
                         style={{
                             left: leftPos,
@@ -86,14 +83,12 @@ export default function OrganizationCard({
                         className="absolute w-40 h-40 md:w-64 md:h-64 bg-blue-500/20 rounded-[40px] z-0 backdrop-blur-md border border-white/10"
                     />
 
-                    {/* --- CARD CONTAINER --- */}
                     <div
                         className={`relative z-10 w-full bg-transparent border-2 border-white/50 rounded-[40px] p-8 md:p-12 overflow-hidden backdrop-blur-[2px] flex flex-col md:items-center gap-8 md:gap-12
                         ${isOdd ? "md:flex-row-reverse" : "md:flex-row"} 
                         `}
                     >
-                        
-                        {/* --- BAGIAN GAMBAR --- */}
+
                         <motion.div 
                             className="w-full md:w-5/12 h-[300px] md:h-[400px] relative shrink-0"
                             initial="hidden"
@@ -101,8 +96,6 @@ export default function OrganizationCard({
                             viewport={{ once: true, amount: 0.3 }}
                             variants={imageVariants} 
                         >
-                            {/* PERUBAHAN DI SINI: Menggunakan Hex #171717 (Neutral Dark) */}
-                            {/* Ini menghilangkan tint biru dari 'slate' dan memberikan abu-abu murni yang hampir hitam */}
                             <div className={`relative w-full h-full rounded-[30px] overflow-hidden shadow-2xl border border-white/20 transform hover:scale-[1.02] transition-transform duration-500 ${number === 2 ? "bg-[#171717]" : "bg-white"}`}>
                                 <Image 
                                     src={image}
@@ -114,7 +107,6 @@ export default function OrganizationCard({
                             </div>
                         </motion.div>
 
-                        {/* --- BAGIAN TEKS --- */}
                         <div className={`w-full md:w-7/12 flex flex-col gap-6 ${isOdd ? "md:items-start md:text-left" : "md:items-end md:text-right"}`}>
                             <motion.h2
                                 initial={{ opacity: 0, x: -20 }}

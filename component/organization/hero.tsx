@@ -4,17 +4,14 @@ import Image from 'next/image';
 export default function Hero() {
     return (
         <div>
-            {/* Main Content Area - Centered vertically */}
             <main className="flex-grow flex items-center justify-center px-4 md:px-[73px] py-24 relative z-10">
 
-                {/* Card Container */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} // Custom ease for elegance
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="relative w-full max-w-[1320px] h-[75vh] rounded-[40px] overflow-hidden shadow-2xl"
                 >
-                    {/* Background Image */}
                     <div className="absolute inset-0 z-0">
                         <Image
                             src="/images/organization-illustration.png"
@@ -25,13 +22,10 @@ export default function Hero() {
                         />
                     </div>
 
-                    {/* Navy Blue Overlay with 80% Transparency */}
                     <div className="absolute inset-0 z-10 bg-[#0C1B43]/80 backdrop-blur-[2px]" />
 
-                    {/* Content Container */}
                     <div className="relative z-20 w-full h-full flex flex-col items-center justify-center text-center px-6">
 
-                        {/* Background Outlined Text (Stretched) */}
                         <motion.div
                             initial={{ opacity: 0, scale: 1.1 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -46,9 +40,8 @@ export default function Hero() {
                             </h1>
                         </motion.div>
 
-                        {/* Main Content Group */}
                         <div className="relative space-y-8">
-                            {/* Main Title */}
+
                             <motion.h1
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -58,7 +51,6 @@ export default function Hero() {
                                 Organisasi & Kegiatan
                             </motion.h1>
 
-                            {/* Decorative Line */}
                             <motion.div
                                 initial={{ scaleX: 0 }}
                                 animate={{ scaleX: 1 }}
@@ -66,7 +58,6 @@ export default function Hero() {
                                 className="h-[2px] w-24 bg-cyan-400 mx-auto rounded-full"
                             />
 
-                            {/* Subtitle */}
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -77,7 +68,6 @@ export default function Hero() {
                             </motion.p>
                         </div>
 
-                        {/* Floating Decorative Elements */}
                         <motion.div
                             animate={{ y: [0, -15, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
