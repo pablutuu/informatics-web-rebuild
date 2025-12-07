@@ -10,6 +10,8 @@ import Lenis from "lenis"; // Smooth Scroll Core
 import { BreakingNewsCard } from '../../component/news/BreakingNewsCard';
 import { RecommendationCard } from '../../component/news/RecommendationCard';
 import { BreakingNewsSlider } from '../../component/news/BreakingNewsSlider';
+import Navbar from "@/component/navbar";
+import Footer from "@/component/footer";
 
 interface NewsItem {
   id: string;
@@ -111,6 +113,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 ">
+      <Navbar />
+
       <main className="max-w-7xl mx-auto px-4 lg:px-8 pb-20 pt-25">
         <section className="mb-12">
           <div className="flex items-center justify-between mb-6">
@@ -172,6 +176,8 @@ export default function Home() {
           </motion.div>
         </section>
       </main>
+      
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Navbar from "../../../components/navbar";
-import Footer from "../../../components/footer";
+import Navbar from "@/component/navbar";
+import Footer from "@/component/footer";
 
 // --- Data Halaman ---
 const IntroductionData = {
