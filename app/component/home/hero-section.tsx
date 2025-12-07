@@ -83,7 +83,7 @@ export default function HeroSection() {
         initial="hidden"
         animate="visible"
       >
-        <motion.div className="flex flex-col items-center gap-2 overflow-hidden pb-4"> 
+        <motion.div className="flex flex-col items-center gap-2 overflow-hidden pb-2"> 
           <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight drop-shadow-2xl">
             Teknik Informatika
           </motion.h1>
@@ -95,7 +95,7 @@ export default function HeroSection() {
         {/* Description */}
         <motion.p 
           variants={itemVariants} 
-          className="text-lg md:text-2xl text-gray-300 max-w-3xl font-light leading-relaxed drop-shadow-md"
+          className="text-lg md:text-2xl text-gray-300 max-w-3xl font-medium leading-relaxed drop-shadow-md"
         >
           Center of excellence in education, research, and application of information technology.
         </motion.p>
