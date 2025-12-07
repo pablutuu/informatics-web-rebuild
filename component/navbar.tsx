@@ -5,7 +5,13 @@ export default function Navbar() {
   const navItems = [
     { name: 'Beranda', path: '/' },
     { name: 'Profil', path: '#' },
-    { name: 'Akademik', path: '/academic' },
+    { name: 'Akademik', path: '/academic' ,
+      dropdown: [
+        { name: 'Program Sarjana (S1)', path: '/academic/bachelor' },
+        { name: 'Program Magister (S2)', path: '/academic/master' },
+        { name: 'Program Doktoral (S3)', path: '/academic/doctoral' },
+      ]
+    },
     { 
       name: 'Fasilitas', 
       path: '/fasilitas',
