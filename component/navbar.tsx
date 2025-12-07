@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 export default function Navbar() {
   const navItems = [
     { name: 'Beranda', path: '/' },
-    { name: 'Profil', path: '#' },
+    { name: 'Profil', path: '/profile' },
     { name: 'Akademik', path: '/academic' ,
       dropdown: [
         { name: 'Program Sarjana (S1)', path: '/academic/bachelor' },
