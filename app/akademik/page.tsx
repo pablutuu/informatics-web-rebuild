@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import AcademicHero from "@/component/academic/AcademicHero";
