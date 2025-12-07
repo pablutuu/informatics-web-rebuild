@@ -10,15 +10,15 @@ const organizations = [
     },
     {
         number: 2,
-        title: "IEEE Hasanuddin University Student Branch",
-        description: "IEEE adalah asosiasi profesional terbesar di dunia yang didedikasikan untuk memajukan inovasi teknologi dan keunggulan demi kebaikan umat manusia. IEEE Hasanuddin University Student Branch menyediakan komunitas melalui publikasi, konferensi, standar teknologi, serta aktivitas profesional dan pendidikan. Organisasi ini berusaha mencapai keunggulan melalui profesionalisme bersama dengan IEEE Student Branch lainnya di Indonesia.",
-        activities: ["IEE TALK", "IEE COURSE", "IEEE Leadership Upgrading"],
+        title: "Developer Student Clubs Universitas Hasanuddin",
+        description: "Google Developer Student Club (GDSC) merupakan komunitas berbasis universitas bagi mahasiswa yang tertarik dengan teknologi, khususnya teknologi dari Google. GDSC menjadi wadah untuk berkembang sebagai developer, mulai dari pemula hingga tingkat lanjut. Tidak hanya berfokus pada 'pemrograman', GDSC juga menekankan pentingnya terhubung, belajar bersama, dan tumbuh bersama. Komunitas ini menjadi forum koneksi lintas jurusan dan latar belakang bagi mahasiswa yang memiliki minat terhadap teknologi. Instagram: gdsc_unhas",
+        activities: ["GDSC Summit Global", "GDSC Indonesia Summit", "Microblog"],
     },
     {
         number: 3,
-        title: "IEEE Hasanuddin University Student Branch",
-        description: "IEEE adalah asosiasi profesional terbesar di dunia yang didedikasikan untuk memajukan inovasi teknologi dan keunggulan demi kebaikan umat manusia. IEEE Hasanuddin University Student Branch menyediakan komunitas melalui publikasi, konferensi, standar teknologi, serta aktivitas profesional dan pendidikan. Organisasi ini berusaha mencapai keunggulan melalui profesionalisme bersama dengan IEEE Student Branch lainnya di Indonesia.",
-        activities: ["IEE TALK", "IEE COURSE", "IEEE Leadership Upgrading"],
+        title: "OKIF FT-UH",
+        description: "OKIF FT-UH merupakan organisasi kemahasiswaan bagi mahasiswa Program Studi Informatika di Universitas Hasanuddin yang menjadi wadah untuk berkegiatan, berkreasi, serta mengembangkan potensi dalam bidang akademik maupun non-akademik.",
+        activities: [],
     },
 ];
 
