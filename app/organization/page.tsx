@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from '@/component/navbar';
+import Footer from '@/component/footer';
 import SmoothScroll from '../../component/home/smooth-scroll';
 import Hero from '../../component/organization/hero';
 import Organization from '../../component/organization/organization';
@@ -14,6 +15,7 @@ export default function OrganizationPage() {
         <Hero />
         <Organization />
 
+        <Footer />
       </div>
     </SmoothScroll>
   );
