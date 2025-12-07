@@ -19,7 +19,8 @@ export default function Navbar() {
             { name: 'Profil', path: '/profil' },
             { name: 'Akademik', path: '/akademik' },
             { name: 'Fasilitas', path: '/fasilitas' },
-            { name: 'Organisasi', path: '/organization' }
+            { name: 'Organisasi', path: '/organization'},
+            { name: 'Berita', path: '/news' }
           ].map((item) => (
             <Link key={item.name} href={item.path} className="flex items-center justify-center h-[50px] px-4 cursor-pointer">
               <div className="text-white text-center font-medium text-base leading-3 hover:text-gray-300 transition-colors">
