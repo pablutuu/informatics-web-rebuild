@@ -1,8 +1,8 @@
 "use client";
 
-import SmoothScroll from './../component/home/smooth-scroll';
-import Hero from '../component/organization/hero';
-import Organization from '../component/organization/organization';
+import SmoothScroll from '../../component/home/smooth-scroll';
+import Hero from '../../component/organization/hero';
+import Organization from '../../component/organization/organization';
 
 export default function OrganizationPage() {
   return (

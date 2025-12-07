@@ -1,8 +1,8 @@
 
 
-import AcademicHero from "@/app/component/academic/AcademicHero";
-import AcademicSection from "@/app/component/academic/AcademicSection";
-import ProgramCard from "@/app/component/academic/ProgramCard";
+import AcademicHero from "@/component/academic/AcademicHero";
+import AcademicSection from "@/component/academic/AcademicSection";
+import ProgramCard from "@/component/academic/ProgramCard";
 import { BookOpen, FileText, Map } from "lucide-react";
 
 export default function AcademicPage() {

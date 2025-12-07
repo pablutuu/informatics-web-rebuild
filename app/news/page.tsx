@@ -7,9 +7,9 @@ import { Menu, Search, Bell } from "lucide-react"; // Icon Lucide
 import { FaFire } from "react-icons/fa"; // Icon React Icons (Contoh penggunaan)
 import { motion } from "framer-motion"; // Framer Motion
 import Lenis from "lenis"; // Smooth Scroll Core
-import { BreakingNewsCard } from '../component/news/BreakingNewsCard';
-import { RecommendationCard } from '../component/news/RecommendationCard';
-import { BreakingNewsSlider } from '../component/news/BreakingNewsSlider';
+import { BreakingNewsCard } from '../../component/news/BreakingNewsCard';
+import { RecommendationCard } from '../../component/news/RecommendationCard';
+import { BreakingNewsSlider } from '../../component/news/BreakingNewsSlider';
 
 interface NewsItem {
   id: string;
