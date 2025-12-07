@@ -78,12 +78,8 @@ export default function AccreditationSection() {
     >
       
       {/* --- HEADER --- */}
-      <div className="absolute top-4 md:top-8 left-0 w-full text-center z-30 px-4">
-        <div className="inline-block mb-2 px-4 py-1 rounded-full border border-blue-500/30 bg-blue-900/20 backdrop-blur-sm">
-            <span className="text-blue-400 text-sm font-semibold tracking-widest uppercase">
-                Quality Assurance
-            </span>
-        </div>
+      <div className="absolute top-10 md:top-16 left-0 w-full text-center z-30 px-4">
+
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-2">
             Akreditasi &<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">

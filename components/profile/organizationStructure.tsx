@@ -64,7 +64,6 @@ export default function OrganizationStructure() {
       {/* === HEADER (Judul Naik Ke Atas) === */}
       <div 
         ref={titleRef} 
-        // [PERBAIKAN]: Mengubah 'top-8/12' menjadi 'top-4 md:top-8' agar lebih mepet atas
         className="absolute top-4 left-6 md:top-8 md:left-16 z-20"
       >
         <div className="flex items-center gap-3 mb-2">
@@ -75,9 +74,9 @@ export default function OrganizationStructure() {
         </div>
         
         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-          Organization<br />
+          Struktur<br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-            Structure
+            Organisasi
           </span>
         </h1>
       </div>
@@ -85,9 +84,6 @@ export default function OrganizationStructure() {
       {/* === IMAGE CONTAINER (Gambar Turun Ke Bawah) === */}
       <div 
         ref={imageWrapperRef}
-        // [PERBAIKAN]: 
-        // 1. Menambahkan 'mt-32' (Mobile) dan 'md:mt-24' (Desktop) agar gambar turun menjauh dari judul
-        // 2. Mengurangi sedikit tinggi 'h-[60vh]' agar fit di layar setelah didorong ke bawah
         className="relative z-10 w-[95%] md:w-[85%] h-[55vh] md:h-[65vh] mt-32 md:mt-24 p-4 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl flex items-center justify-center will-change-transform"
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-blue-600/20 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
