@@ -1,3 +1,4 @@
+// ai-generated
 const curriculum = {
   program: "S1 Informatika",
 
