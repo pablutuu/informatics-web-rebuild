@@ -38,7 +38,7 @@ export default function VisiMisi() {
                       <div className="relative z-10">
                          <h2 className="text-5xl lg:text-6xl font-bold text-[#0C1B43] mb-8 tracking-tight">Visi</h2>
                          <motion.div 
-                             className="bg-white p-8 lg:p-12 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
+                             className="bg-white p-8 lg:p-12 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden group hover:shadow-lg hover:rotate-1 transition-all duration-500"
                              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
                          >
                              <div className="absolute top-0 left-0 w-3 h-full bg-[#0C1B43]" />
@@ -105,7 +105,7 @@ function Card({ item, index, total }: { item: string, index: number, total: numb
                 style={{ scale: scale }}
                 whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
             >
-                <div className="bg-white p-8 lg:p-10 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-gray-300 group cursor-pointer">
+                <div className="bg-white p-8 lg:p-10 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-gray-300 group cursor-pointer">
                      <div className="flex items-start gap-6">
                         <div className="hidden lg:flex flex-shrink-0 w-12 h-12 items-center justify-center bg-[#F3F4F6] text-[#0C1B43] rounded-xl font-bold text-xl border border-gray-100 group-hover:bg-[#0C1B43] group-hover:text-white transition-colors duration-300">
                             {index + 1}

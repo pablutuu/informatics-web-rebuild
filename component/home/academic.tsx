@@ -124,7 +124,7 @@ export const Academic = () => {
                                 </p>
                                 <div className="flex items-center gap-5 cursor-pointer group w-fit">
                                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center group-hover:bg-gray-200 transition-all duration-300 transform group-hover:scale-105 shadow-lg">
-                                        <IoMdArrowForward className="text-black text-2xl" />
+                                        <IoMdArrowForward className="text-black text-2xl transition-transform duration-300 group-hover:-rotate-30" />
                                     </div>
                                     <span className="text-white text-xl font-medium tracking-wide group-hover:underline decoration-1 underline-offset-4">
                                         Lihat selengkapnya
