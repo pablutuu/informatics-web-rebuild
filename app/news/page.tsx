@@ -144,10 +144,6 @@ export default function Home() {
         <section>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Recommendation</h2>
-            {/* <Link href="/recommendations" className="text-blue-600 text-sm font-medium hover:text-blue-800 flex items-center gap-1 group">
-              View all
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </Link> */}
           </div>
 
           <motion.div
@@ -157,17 +153,21 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-1 gap-6"
           >
-            {recommendations.map((news) => {
+            {recommendations.map((news, index) => {
                 const slug = news.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
                 return(
-                <motion.div key={news.id} variants={itemVariants}>
-                    <Link href={`./info/${slug}`} className="block">
-                        <RecommendationCard
-                            {...news}
-                        />
-                    </Link>
-                </motion.div>
-                )
+                    <div
+                        key={news.id}
+                        className="animate-fade-in"
+                        style={{ animationDelay: `${index * 50}ms` }}
+                    >
+                        <Link href={`./info/${slug}`} className="block">
+                            <RecommendationCard
+                                {...news}
+                            />
+                        </Link>
+                    </div>
+                );
             })}
           </motion.div>
         </section>
