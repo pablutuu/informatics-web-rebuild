@@ -5,8 +5,8 @@ import Footer from "@/component/footer";
 // --- Data Halaman ---
 const IntroductionData = {
   description: [
-    "The Informatics Doctoral Study Program (PSDIF) is under the auspices of the Department of Informatics Engineering, Faculty of Engineering, Hasanuddin University.",
-    "This program is designed to produce graduates who have strong technical competencies, business ethics, and the ability to provide innovative solutions within the scope of computer science."
+    "Program Studi Doktor Informatika (PSDIF) berada di bawah naungan Departemen Teknik Informatika, Fakultas Teknik, Universitas Hasanuddin.",
+    "Program ini dirancang untuk menghasilkan lulusan yang memiliki kompetensi teknis yang kuat, etika bisnis, dan kemampuan untuk memberikan solusi inovatif dalam bidang ilmu komputer."
   ],
 };
 
@@ -22,9 +22,9 @@ const EducationalPathData = {
 
 const curriculumData = {
   description: [
-    "The curriculum is centered based on KKNI (Indonesian National Qualifications Framework) and OBE (Outcome Based Education).",
-    "It aims to provide technical competency and practical expertise, as well as scientific and scientific knowledge.",
-    "Data science is the main component of the final assignment.",
+    "Kurikulum ini didasarkan pada KKNI (Kerangka Kualifikasi Nasional Indonesia) dan OBE (Pendidikan Berbasis Hasil).",
+    "Tujuannya adalah untuk memberikan kompetensi teknis dan keahlian praktis, serta pengetahuan ilmiah dan keilmuan." ,
+    "Ilmu data merupakan komponen utama dari tugas akhir."
   ],
   image: "/image.png", 
 };
@@ -55,11 +55,11 @@ const laboratoriesData = {
 
 const StudyLoadData = {
   description: [
-    "Total Credits that must be completed: 64 credits", 
-    "Study Period:",
-    "Minimum: 5 semesters",
-    "Normal: 6 semesters",
-    "Maximum: 10 semesters",
+    "Jumlah SKS yang harus diselesaikan: 64 SKS", 
+    "Periode Studi:",
+    "Minimum: 5 semester",
+    "Normal: 6 semester",
+    "Maksimum: 10 semester",
   ],
   image: "/image.png", 
 };
