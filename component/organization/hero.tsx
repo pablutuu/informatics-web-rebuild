@@ -93,6 +93,6 @@ export default function Hero() {
                 </motion.div>
             </main>
 
-        </div>
-    );
+        </div>
+    );
 }
