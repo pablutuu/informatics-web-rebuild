@@ -6,17 +6,17 @@ import { gsap, useGSAP } from "@/lib/gsap";
 const visions = [
   { id: 1, title: "Global Standard", desc: "Menjadi program studi informatika berstandar internasional pada tahun 2030." },
   { id: 2, title: "Innovation Hub", desc: "Pusat pengembangan teknologi AI dan Software Engineering terdepan." },
-  { id: 3, title: "Innovation Hub", desc: "Pusat pengembangan teknologi AI dan Software Engineering terdepan." },
-  { id: 4, title: "Innovation Hub", desc: "Pusat pengembangan teknologi AI dan Software Engineering terdepan." },
-  { id: 5, title: "Innovation Hub", desc: "Pusat pengembangan teknologi AI dan Software Engineering terdepan." },
+  { id: 3, title: "Smart Ecosystem", desc: "Menciptakan ekosistem digital yang mendukung produktivitas akademik." },
+  { id: 4, title: "Tech Leadership", desc: "Melahirkan pemimpin teknologi masa depan yang berintegritas." },
+  { id: 5, title: "Social Impact", desc: "Memberikan solusi teknologi tepat guna bagi permasalahan masyarakat." },
 ];
 
 const missions = [
   { id: 1, text: "Menyelenggarakan pendidikan berkualitas tinggi berbasis riset terkini." },
   { id: 2, text: "Membangun kemitraan strategis dengan industri teknologi global." },
-  { id: 3, title: "Innovation Hub", desc: "Pusat pengembangan teknologi AI dan Software Engineering terdepan." },
-  { id: 4, title: "Innovation Hub", desc: "Pusat pengembangan teknologi AI dan Software Engineering terdepan." },
-  { id: 5, title: "Innovation Hub", desc: "Pusat pengembangan teknologi AI dan Software Engineering terdepan." },
+  { id: 3, text: "Mengembangkan inovasi berkelanjutan di bidang kecerdasan buatan." },
+  { id: 4, text: "Meningkatkan kontribusi pengabdian masyarakat berbasis teknologi." },
+  { id: 5, text: "Mewujudkan tata kelola program studi yang transparan dan akuntabel." },
 ];
 
 export default function VisionMissionSequence() {
@@ -39,7 +39,6 @@ export default function VisionMissionSequence() {
         window.scrollTo(0, 0);
     }
 
-
     const getScrollDistance = (element: HTMLElement | null) => {
         if (!element) return 0;
         const distance = element.scrollWidth - window.innerWidth;
@@ -50,49 +49,48 @@ export default function VisionMissionSequence() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top", 
-        end: "+=6000",
+        end: "+=7000", 
         pin: true,        
         scrub: 1, 
       },
     });
 
-   
-    
+    // --- SETUP AWAL ---
     tl.set(visiWrapperRef.current, { 
         width: "100%", height: "100%", borderRadius: "0px", y: 0 
     });
 
-    
+    // --- STEP 1: SCROLL VISI ---
     tl.to(visiListRef.current, {
         x: () => getScrollDistance(visiListRef.current), 
         ease: "none",
         duration: 10, 
     });
 
-    
-   
+    // --- STEP 2: WRAP UP VISI (PERBAIKAN POSISI) ---
     tl.to(visiFullContentRef.current, {
         autoAlpha: 0,
-        scale: 0.95, 
+        scale: 0.8, 
         duration: 1.5, 
         ease: "power2.inOut" 
     });
 
+    
     tl.to(visiWrapperRef.current, {
-        width: "280px", 
-        height: "60px", 
-        y: "-42vh", 
+        width: "240px",      
+        height: "50px",      
+        y: "-35vh",          
         borderRadius: "99px",
-        backgroundColor: "rgba(15, 23, 73, 0.9)", 
-        backdropFilter: "blur(12px)",
-        border: "1px solid rgba(59, 130, 246, 0.4)", 
-        boxShadow: "0 10px 40px -10px rgba(0,0,0,0.6)",
+        backgroundColor: "rgba(15, 23, 73, 0.6)", 
+        backdropFilter: "blur(8px)",
+        border: "1px solid rgba(96, 165, 250, 0.3)", 
+        boxShadow: "0 0 0 0 rgba(0,0,0,0)",
         
-        duration: 1.5, 
+        duration: 5, 
         ease: "power3.inOut" 
     }, "<"); 
 
-    
+    // C. Munculkan Label Kecil
     tl.to(visiLabelRef.current, {
         autoAlpha: 1,
         scale: 1,
@@ -100,7 +98,7 @@ export default function VisionMissionSequence() {
         ease: "back.out(1.5)"
     }, "-=0.5"); 
 
-  
+    // --- STEP 3: MISI MUNCUL ---
     tl.to(misiWrapperRef.current, {
         autoAlpha: 1,
         scale: 1,
@@ -111,13 +109,13 @@ export default function VisionMissionSequence() {
     tl.to(misiListRef.current, {
         x: () => getScrollDistance(misiListRef.current), 
         duration: 10, 
+        ease: "none"
     });
 
-   
-    
+    // --- STEP 4: FINAL TRANSITION ---
     tl.to([visiWrapperRef.current, misiWrapperRef.current], {
         autoAlpha: 0,
-        y: "-60vh", 
+        y: "-50vh", 
         duration: 2, 
         ease: "power2.inOut"
     });
@@ -141,19 +139,20 @@ export default function VisionMissionSequence() {
             ref={visiWrapperRef}
             className="absolute inset-0 z-30 flex flex-col items-center justify-center m-auto origin-center bg-transparent overflow-hidden" 
         >
+            {/* Full Content Container */}
             <div 
                 ref={visiFullContentRef} 
                 className="absolute inset-0 flex flex-col items-center justify-center w-full h-full"
             >
-                <h2 className="mb-12 text-center text-4xl font-bold text-blue-400 md:text-6xl">
+                <h2 className="mb-12 text-center text-4xl font-bold text-blue-400 md:text-6xl drop-shadow-lg">
                     VISI KAMI
                 </h2>
                 <div className="flex w-full overflow-hidden"> 
-                    <div ref={visiListRef} className="flex w-max gap-10 pl-[5vw] pr-[5vw]"> 
+                    <div ref={visiListRef} className="flex w-max gap-8 pl-[5vw] pr-[5vw]"> 
                         {visions.map((vision) => (
                             <div 
                             key={vision.id} 
-                            className="visi-card flex h-[350px] w-[85vw] flex-shrink-0 flex-col justify-center rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md p-10 shadow-2xl md:w-[600px]"
+                            className="visi-card flex h-[350px] w-[85vw] flex-shrink-0 flex-col justify-center rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 backdrop-blur-md p-10 shadow-xl md:w-[500px]"
                             >
                                 <h3 className="mb-4 text-3xl font-bold text-white">{vision.title}</h3>
                                 <p className="text-xl font-light leading-relaxed text-gray-300">{vision.desc}</p>
@@ -162,29 +161,34 @@ export default function VisionMissionSequence() {
                     </div>
                 </div>
             </div>
-            <div ref={visiLabelRef} className="absolute flex items-center gap-2 opacity-0 scale-50">
-                <div className="h-2 w-2 rounded-full bg-blue-400 animate-pulse"></div>
-                <span className="text-sm font-bold tracking-widest text-blue-100 uppercase">Visi Kami</span>
+
+
+            <div ref={visiLabelRef} className="absolute flex items-center gap-3 opacity-0 scale-50">
+                <span className="flex h-3 w-3 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                </span>
+                <span className="text-sm font-semibold tracking-widest text-blue-100 uppercase">Visi</span>
             </div>
         </div>
 
         {/* --- LAYER 2: MISI WRAPPER --- */}
         <div 
             ref={misiWrapperRef}
-            className="absolute inset-0 z-20 flex flex-col items-center justify-center invisible opacity-0"
+            className="absolute inset-0 z-20 flex flex-col items-center justify-center invisible opacity-0 pt-[10vh]" // Tambah padding top agar tidak nabrak badge Visi
         >
-             <h2 className="mb-12 text-center text-4xl font-bold text-emerald-400 md:text-6xl">
+             <h2 className="mb-12 text-center text-4xl font-bold text-emerald-400 md:text-6xl drop-shadow-lg">
                 MISI KAMI
             </h2>
             <div className="flex w-full overflow-hidden">
-                <div ref={misiListRef} className="flex w-max gap-10 pl-[5vw] pr-[5vw]">
+                <div ref={misiListRef} className="flex w-max gap-8 pl-[5vw] pr-[5vw]">
                     {missions.map((misi) => (
                     <div 
                         key={misi.id} 
-                        className="misi-card flex h-[350px] w-[85vw] flex-shrink-0 flex-col justify-center rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md p-10 shadow-2xl md:w-[600px]"
+                        className="misi-card flex h-[350px] w-[85vw] flex-shrink-0 flex-col justify-center rounded-3xl bg-gradient-to-br from-emerald-900/40 to-emerald-900/20 border border-emerald-500/20 backdrop-blur-md p-10 shadow-xl md:w-[500px]"
                     >
-                        <div className="mb-4 text-6xl font-bold text-emerald-500/30">0{misi.id}</div>
-                        <p className="text-2xl font-medium text-gray-200">{misi.text}</p>
+                        <div className="mb-4 text-6xl font-bold text-emerald-500/40">0{misi.id}</div>
+                        <p className="text-2xl font-medium text-gray-200 leading-relaxed">{misi.text}</p>
                     </div>
                     ))}
                 </div>
@@ -194,24 +198,38 @@ export default function VisionMissionSequence() {
         {/* --- LAYER 3: FINAL LAYOUT --- */}
         <div 
             ref={finalLayoutRef}
-            className="absolute inset-0 z-40 flex h-full w-full flex-col items-center justify-center p-8 invisible opacity-0"
+            className="absolute inset-0 z-40 flex h-full w-full flex-col items-center justify-center p-6 invisible opacity-0"
         >
-             <div className="text-center mb-8 shrink-0">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">Visi & Misi</h2>
-                <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-emerald-600 mx-auto rounded-full"></div>
+             <div className="text-center mb-10 shrink-0 mt-10"> {/* Margin top extra untuk safety navbar */}
+                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">Visi & Misi</h2>
+                <div className="h-1.5 w-32 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto rounded-full"></div>
             </div>
-            <div className="flex w-full max-w-4xl flex-col gap-6">
-                <div className="w-full rounded-3xl bg-blue-900/20 border border-blue-500/20 p-8 shadow-xl">
-                    <h3 className="mb-2 text-2xl font-bold text-blue-400">Visi Utama</h3>
-                    <p className="text-lg md:text-xl font-light text-gray-200">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
+                {/* Visi Final Card */}
+                <div className="group w-full rounded-3xl bg-blue-950/40 border border-blue-500/30 p-8 shadow-2xl backdrop-blur-sm hover:bg-blue-900/40 transition-colors">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="h-8 w-1 bg-blue-500 rounded-full"></div>
+                        <h3 className="text-3xl font-bold text-blue-400">Visi</h3>
+                    </div>
+                    <p className="text-lg md:text-2xl font-light text-blue-100 leading-relaxed">
                     "Menjadi program studi informatika berstandar internasional pada tahun 2030."
                     </p>
                 </div>
-                <div className="w-full rounded-3xl bg-emerald-900/20 border border-emerald-500/20 p-8 shadow-xl">
-                    <h3 className="mb-4 text-2xl font-bold text-emerald-400">Misi Utama</h3>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-5 text-base md:text-lg font-light text-gray-300 list-disc">
-                        <li>Pendidikan berbasis riset.</li>
-                        <li>Kemitraan global.</li>
+
+                {/* Misi Final Card */}
+                <div className="group w-full rounded-3xl bg-emerald-950/40 border border-emerald-500/30 p-8 shadow-2xl backdrop-blur-sm hover:bg-emerald-900/40 transition-colors">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="h-8 w-1 bg-emerald-500 rounded-full"></div>
+                        <h3 className="text-3xl font-bold text-emerald-400">Misi</h3>
+                    </div>
+                    <ul className="space-y-3">
+                        {missions.slice(0, 3).map((m, i) => (
+                             <li key={i} className="flex items-start gap-3 text-base md:text-lg text-emerald-100/80">
+                                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                                {m.text}
+                             </li>
+                        ))}
                     </ul>
                 </div>
             </div>
