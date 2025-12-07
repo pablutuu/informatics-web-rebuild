@@ -1,10 +1,12 @@
 "use client"; // Pastikan ini ada karena kita pakai useEffect
 
 import { useEffect } from "react"; // Import useEffect
-import HeroProfile from "@/components/profile/heroProfile";
-import VisionMissionSequence from "@/components/profile/visionMission";
-import OrganizationStructure from "@/components/profile/organizationStructure"; 
-import AccreditationSection from "@/components/profile/accreditation"; 
+import HeroProfile from "@/component/profile/heroProfile";
+import VisionMissionSequence from "@/component/profile/visionMission";
+import OrganizationStructure from "@/component/profile/organizationStructure"; 
+import AccreditationSection from "@/component/profile/accreditation"; 
+import Navbar from "@/component/navbar";
+import Footer from "@/component/footer";
 
 export default function ProfilePage() {
 
@@ -20,7 +22,8 @@ export default function ProfilePage() {
 
   return (
     <main className="min-h-screen w-full bg-[#020410]">
-      
+      <Navbar />
+
       {/* Hero Section */}
       <HeroProfile />
 
@@ -33,6 +36,7 @@ export default function ProfilePage() {
       {/* Akreditasi */}
       <AccreditationSection />
 
+      <Footer />
     </main>
   );
 }

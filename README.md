@@ -1,0 +1,53 @@
+﻿# Rebuild Web Infor - FT UH
+
+Proyek ini adalah desain ulang website Departemen Informatika Universitas Hasanuddin, dibangun dengan teknologi web modern untuk performa tinggi, interaktivitas, dan desain yang responsif.
+
+## 🛠️ Teknologi yang Digunakan
+
+Proyek ini menggunakan stack berikut:
+
+-   **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+-   **Bahasa**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+-   **Animasi**: [Framer Motion](https://www.framer.com/motion/)
+-   **Smooth Scroll**: [Lenis](https://lenis.darkroom.engineering/) and [GSAP](https://gsap.com/)
+-   **Icons**: [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+-   **Typography**: `@tailwindcss/typography`
+
+## 🚀 Panduan Instalasi (Untuk Tim)
+
+Untuk memastikan proyek berjalan lancar tanpa error di komputer masing-masing anggota tim, ikuti langkah-langkah berikut:
+
+### 1. Prasyarat
+Pastikan Anda telah menginstal:
+-   **Node.js**: Versi 18.x atau lebih baru (Disarankan versi LTS terbaru).
+-   **npm**: Biasanya terinstal otomatis dengan Node.js.
+
+### 2. Instalasi Dependensi
+Jalankan perintah berikut di terminal root proyek untuk menginstal semua library yang dibutuhkan:
+
+```bash
+npm install
+```
+
+Perintah ini akan membaca `package.json` dan menginstal dependensi penting seperti:
+-   `framer-motion` (Untuk animasi)
+-   `lenis` (Untuk smooth scrolling)
+-   `lucide-react` & `react-icons` (Untuk aset ikon)
+-   `@tailwindcss/typography` (Untuk styling artikel berita)
+
+### 3. Menjalankan Server Development
+Setelah instalasi selesai, jalankan server lokal dengan:
+
+```bash
+npm run dev
+```
+
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya.
+
+## 📝 Catatan Penting
+-   **Tailwind v4**: Proyek ini menggunakan Tailwind v4. Konfigurasi CSS utama ada di `app/globals.css`. Plugin `@tailwindcss/typography` sudah dikonfigurasi di sana.
+-   **Import**: Gunakan alias `@/` jika sudah dikonfigurasi, atau relative path yang sesuai.
+
+---
+
