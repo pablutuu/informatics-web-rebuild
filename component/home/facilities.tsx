@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
 import { IoMdArrowForward } from 'react-icons/io';
+import Link from 'next/link';
 
 const facilities = [
   {
@@ -104,10 +105,10 @@ export default function Facilities() {
                     <h2 className="text-5xl font-bold text-[#0C1B43] mb-4">Fasilitas</h2>
                     <p className="text-gray-500 text-xl font-light">Mendukung perjalanan belajar Anda dengan laboratorium kelas dunia.</p>
                 </div>
-                <div className="flex gap-2 items-center text-[#0C1B43] font-medium text-lg group cursor-pointer">
+                <Link href="/fasilitas" className="flex gap-2 items-center text-[#0C1B43] font-medium text-lg group cursor-pointer">
                     <span>Lihat Semua</span>
                     <IoMdArrowForward className="group-hover:translate-x-1 transition-transform" />
-                </div>
+                </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

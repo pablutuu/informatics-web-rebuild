@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { IoMdArrowForward } from 'react-icons/io';
+import Link from 'next/link';
 
 const programs = [
   {
@@ -122,14 +123,14 @@ export const Academic = () => {
                                 <p className="text-[#f6feff]/90 text-lg md:text-xl lg:text-2xl leading-relaxed font-sans font-light">
                                     {programs[activeProgram].description}
                                 </p>
-                                <div className="flex items-center gap-5 cursor-pointer group w-fit">
+                                <Link href="/academic" className="flex items-center gap-5 cursor-pointer group w-fit">
                                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center group-hover:bg-gray-200 transition-all duration-300 transform group-hover:scale-105 shadow-lg">
                                         <IoMdArrowForward className="text-black text-2xl transition-transform duration-300 group-hover:-rotate-30" />
                                     </div>
                                     <span className="text-white text-xl font-medium tracking-wide group-hover:underline decoration-1 underline-offset-4">
                                         Lihat selengkapnya
                                     </span>
-                                </div>
+                                </Link>
                             </motion.div>
                         </AnimatePresence>
                     </div>
