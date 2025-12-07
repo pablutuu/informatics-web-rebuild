@@ -37,7 +37,7 @@ export default function AcademicPage() {
     {
       title: "Informasi Program",
       icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
-      link: "/academic/master/program_information",
+      link: "/academic/master",
     },
     {
       title: "Brosur PMB",
@@ -55,7 +55,7 @@ export default function AcademicPage() {
     {
       title: "Informasi Program",
       icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
-      link: "/academic/doctoral/program_information",
+      link: "/academic/doctoral",
     },
     {
       title: "Brosur PMB",
