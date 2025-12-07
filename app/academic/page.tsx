@@ -20,12 +20,12 @@ export default function AcademicPage() {
 
   const s1Cards = [
     {
-      title: "Program Information",
+      title: "Informasi Program",
       icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
       link: "/academic/bachelor", // Points to the main Bachelor page
     },
     {
-      title: "PMB Brochure",
+      title: "Brosur PMB",
       icon: <FileText className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
       // onclick lightbox
       onClick: () => handleBrochureClick("/images/brochure-bachelor.png"),
@@ -35,12 +35,12 @@ export default function AcademicPage() {
 
   const s2Cards = [
     {
-      title: "Program Information",
+      title: "Informasi Program",
       icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
       link: "/academic/master/program_information",
     },
     {
-      title: "PMB Brochure",
+      title: "Brosur PMB",
       icon: <FileText className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
       link: "/academic/master/brochure",
     },
@@ -53,12 +53,12 @@ export default function AcademicPage() {
 
   const s3Cards = [
     {
-      title: "Program Information",
+      title: "Informasi Program",
       icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
       link: "/academic/doctoral/program_information",
     },
     {
-      title: "PMB Brochure",
+      title: "Brosur PMB",
       icon: <FileText className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
       link: "/academic/doctoral/brochure",
     },
@@ -77,7 +77,7 @@ export default function AcademicPage() {
         <AcademicHero />
 
         {/* Bachelor (S1) Section - Text Left, Cards Right */}
-        <AcademicSection title="Bachelor (S1) Program Academic Information">
+        <AcademicSection title="Informasi Akademik Program Sarjana (S1)">
           {/* Spacer to align 2 cards to the right on desktop */}
           <div className="hidden md:block" aria-hidden="true" />
           {s1Cards.map((card, index) => (
@@ -93,7 +93,7 @@ export default function AcademicPage() {
 
         {/* Master (S2) Section - Cards Left, Text Right */}
         <AcademicSection 
-          title="Master (S2) Program Academic Information" 
+          title="Informasi Akademik Program Magister (S2)" 
           reversed={true}
         >
           {s2Cards.map((card, index) => (
@@ -107,7 +107,7 @@ export default function AcademicPage() {
         </AcademicSection>
 
         {/* Doctoral (S3) Section - Text Left, Cards Right */}
-        <AcademicSection title="Informatics Doctoral (S3) Study Program Academic Information">
+        <AcademicSection title="Informasi Akademik Program Doktor (S3) Informatika">
            {s3Cards.map((card, index) => (
             <ProgramCard
               key={index}

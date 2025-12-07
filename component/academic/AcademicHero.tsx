@@ -45,7 +45,7 @@ export default function AcademicHero() {
                                 className="text-6xl md:text-9xl font-bold tracking-widest text-transparent opacity-20"
                                 style={{ WebkitTextStroke: "2px rgba(255, 255, 255, 0.3)" }}
                             >
-                                ACADEMIC
+                                AKADEMIK
                             </h1>
                         </motion.div>
 
@@ -58,7 +58,7 @@ export default function AcademicHero() {
                                 transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
                                 className="text-4xl md:text-7xl font-bold text-white tracking-tight drop-shadow-lg"
                             >
-                                ACADEMIC
+                                AKADEMIK
                             </motion.h1>
 
                             {/* Decorative Line */}
@@ -76,7 +76,7 @@ export default function AcademicHero() {
                                 transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
                                 className="text-base md:text-xl text-gray-200 font-light tracking-wide max-w-2xl mx-auto leading-relaxed uppercase"
                             >
-                                Bachelor Program <span className="mx-2 text-yellow-400">•</span> Master Program <span className="mx-2 text-yellow-400">•</span> Doctoral Program
+                                Program Sarjana <span className="mx-2 text-yellow-400">•</span> Program Magister <span className="mx-2 text-yellow-400">•</span> Program Doktor
                             </motion.p>
                         </div>
 

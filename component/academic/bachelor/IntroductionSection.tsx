@@ -5,8 +5,8 @@ import { Cloud, Brain, Cpu, GraduationCap, CheckCircle2 } from "lucide-react";
 
 export default function IntroductionSection() {
     const researchFields = [
-        { name: "Cloud Computing & Big Data", icon: Cloud, color: "text-blue-500", bg: "bg-blue-50" },
-        { name: "Artificial Intelligence & Robotics", icon: Brain, color: "text-purple-500", bg: "bg-purple-50" },
+        { name: "Komputasi Awan & Big Data", icon: Cloud, color: "text-blue-500", bg: "bg-blue-50" },
+        { name: "Kecerdasan Buatan & Robotika", icon: Brain, color: "text-purple-500", bg: "bg-purple-50" },
         { name: "Internet of Things (IoT)", icon: Cpu, color: "text-emerald-500", bg: "bg-emerald-50" },
     ];
 
@@ -29,7 +29,7 @@ export default function IntroductionSection() {
                                 className="flex items-center gap-3 mb-4"
                             >
                                 <div className="h-1 w-12 bg-indigo-600 rounded-full" />
-                                <span className="text-indigo-600 font-bold tracking-wider text-sm uppercase">About The Program</span>
+                                <span className="text-indigo-600 font-bold tracking-wider text-sm uppercase">About Program</span>
                             </motion.div>
                             
                             <motion.h2 
@@ -51,10 +51,10 @@ export default function IntroductionSection() {
                             className="space-y-6 text-slate-600 leading-relaxed text-base md:text-lg"
                         >
                             <p>
-                                The Informatics Undergraduate Study Program is under the auspices of the Department of Informatics Engineering, Faculty of Engineering, Hasanuddin University, and has achieved an <span className="font-semibold text-slate-900">"Unggul" (Excellent)</span> accreditation from LAM INFOKOM.
+                                Program Studi Sarjana Informatika berada di bawah naungan Departemen Teknik Informatika, Fakultas Teknik, Universitas Hasanuddin, dan telah meraih akreditasi <span className="font-semibold text-slate-900">"Unggul"</span> dari LAM INFOKOM.
                             </p>
                             <p>
-                                Designed to produce graduates with superior research capacity and professional ethics, our curriculum is benchmarked against national standards (KKNI) and international guidelines (ACM & IEEE). We cover core subjects such as AI, Data Science, Software Engineering, and Computer Networks.
+                                Dirancang untuk menghasilkan lulusan dengan kapasitas penelitian yang unggul dan etika profesional, kurikulum kami didasarkan pada standar nasional (KKNI) dan panduan internasional (ACM & IEEE). Kami mencakup mata kuliah inti seperti AI, Data Science, Rekayasa Perangkat Lunak, dan Jaringan Komputer.
                             </p>
                         </motion.div>
                     </div>
@@ -71,7 +71,7 @@ export default function IntroductionSection() {
                         >
                             <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                                 <CheckCircle2 className="w-6 h-6 text-green-500" />
-                                Research Fields
+                                Bidang Penelitian
                             </h3>
                             <div className="space-y-4">
                                 {researchFields.map((item, idx) => (
@@ -100,8 +100,8 @@ export default function IntroductionSection() {
                                     <GraduationCap className="w-8 h-8 text-white" />
                                 </div>
                                 <div>
-                                    <p className="text-indigo-200 text-sm font-medium uppercase tracking-wide">Total Study Load</p>
-                                    <p className="text-2xl font-bold">145 Credits</p>
+                                    <p className="text-indigo-200 text-sm font-medium uppercase tracking-wide">Total Beban Studi</p>
+                                    <p className="text-2xl font-bold">145 SKS</p>
                                 </div>
                             </div>
                         </motion.div>

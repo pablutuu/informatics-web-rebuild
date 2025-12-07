@@ -39,9 +39,9 @@ export default function BachelorHero({
                 >
                     {title || (
                         <>
-                            BACHELOR
+                            PROGRAM
                             <br />
-                            PROGRAM (S1)
+                            SARJANA (S1)
                         </>
                     )}
                 </motion.div>

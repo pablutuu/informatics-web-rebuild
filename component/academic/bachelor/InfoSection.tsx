@@ -99,7 +99,7 @@ export default function InfoSection({
                                     transition={{ delay: 0.4, duration: 0.6 }}
                                     className="inline-flex items-center gap-2 text-indigo-900 font-semibold hover:gap-3 transition-all duration-300 w-fit"
                                 >
-                                    Learn More <ArrowRight className="w-5 h-5 bg-indigo-900 text-white rounded-full p-1" />
+                                    Pelajari Lebih Lanjut <ArrowRight className="w-5 h-5 bg-indigo-900 text-white rounded-full p-1" />
                                 </motion.button>
                             ) : (
                                 <motion.div
@@ -112,7 +112,7 @@ export default function InfoSection({
                                         href={learnMoreLink}
                                         className="inline-flex items-center gap-2 text-indigo-900 font-semibold hover:gap-3 transition-all duration-300 w-fit cursor-pointer"
                                     >
-                                        Learn More <ArrowRight className="w-5 h-5 bg-indigo-900 text-white rounded-full p-1" />
+                                        Pelajari Lebih Lanjut <ArrowRight className="w-5 h-5 bg-indigo-900 text-white rounded-full p-1" />
                                     </Link>
                                 </motion.div>
                             )
