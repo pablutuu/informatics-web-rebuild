@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import AcademicHero from "@/component/academic/AcademicHero";
@@ -7,6 +5,8 @@ import AcademicSection from "@/component/academic/AcademicSection";
 import ProgramCard from "@/component/academic/ProgramCard";
 import { BookOpen, FileText, Map, X } from "lucide-react";
 import { useState } from "react";
+// @ts-ignore
+import Lightbox from "react-modal-image";
 import Image from "next/image";
 
 export default function AcademicPage() {
@@ -22,7 +22,7 @@ export default function AcademicPage() {
     {
       title: "Program Information",
       icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
-      link: "/academic/bachelor/information", // Placeholder link
+      link: "/akademik/bachelor", // Placeholder link
     },
     {
       title: "PMB Brochure",
@@ -118,36 +118,13 @@ export default function AcademicPage() {
       </main>
 
       {/* Image Modal */}
-      {isModalOpen && (
-        <div 
-          className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8 transition-opacity duration-300 animate-in fade-in"
-          onClick={() => setIsModalOpen(false)}
-        >
-          {/* Close button - Fixed top right */}
-          <button 
-            onClick={() => setIsModalOpen(false)}
-            className="absolute top-6 right-6 z-[2010] bg-white/10 hover:bg-white/20 text-white rounded-full p-2 transition-colors backdrop-blur-md"
-          >
-            <X size={32} />
-          </button>
-
-          <div 
-            className="relative w-full h-full max-w-5xl max-h-[90vh] flex items-center justify-center animate-in zoom-in-95 duration-200" 
-            onClick={(e) => e.stopPropagation()}
-          >
-            {brochureImage && (
-              <div className="relative w-full h-full"> 
-                <Image 
-                  src={brochureImage} 
-                  alt="PMB Brochure" 
-                  fill 
-                  className="object-contain drop-shadow-2xl"
-                  quality={100}
-                />
-              </div>
-            )}
-          </div>
-        </div>
+      {isModalOpen && brochureImage && (
+        <Lightbox
+          medium={brochureImage}
+          large={brochureImage}
+          alt="PMB Brochure"
+          onClose={() => setIsModalOpen(false)}
+        />
       )}
 
 
