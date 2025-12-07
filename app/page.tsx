@@ -1,27 +1,26 @@
 'use client';
 
+import Navbar from '../component/navbar';
+import Footer from '../component/footer';
 import SmoothScroll from '../component/home/smooth-scroll';
-import { Academic } from '../component/home/academic';
-import VisiMisi from '../component/home/visi-misi';
-import Facilities from '../component/home/facilities';
-import LatestInfo from '../component/home/latest-info';
-import { motion } from 'framer-motion';
 import HeroSection from '../component/home/hero-section';
+import LatestInfo from '../component/home/latest-info';
+import { Academic } from '../component/home/academic';
+import Facilities from '../component/home/facilities';
+import VisiMisi from '../component/home/visi-misi';
 
 export default function Home() {
   return (
     <SmoothScroll>
-      <div className="w-full bg-white text-[#1E1E1E]">
+      <main className="bg-white min-h-screen">
+        <Navbar />
         <HeroSection />
-
         <VisiMisi />
-
         <Academic />
-
         <Facilities />
-
         <LatestInfo />
-      </div>
+        <Footer />
+      </main>
     </SmoothScroll>
   );
 }

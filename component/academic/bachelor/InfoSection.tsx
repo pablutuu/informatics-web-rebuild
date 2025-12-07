@@ -102,17 +102,19 @@ export default function InfoSection({
                                     Learn More <ArrowRight className="w-5 h-5 bg-indigo-900 text-white rounded-full p-1" />
                                 </motion.button>
                             ) : (
-                                <Link href={learnMoreLink} legacyBehavior passHref>
-                                    <motion.a
-                                        initial={{ opacity: 0, y: 10 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.4, duration: 0.6 }}
+                                >
+                                    <Link 
+                                        href={learnMoreLink}
                                         className="inline-flex items-center gap-2 text-indigo-900 font-semibold hover:gap-3 transition-all duration-300 w-fit cursor-pointer"
                                     >
                                         Learn More <ArrowRight className="w-5 h-5 bg-indigo-900 text-white rounded-full p-1" />
-                                    </motion.a>
-                                </Link>
+                                    </Link>
+                                </motion.div>
                             )
                         )}
                     </div>

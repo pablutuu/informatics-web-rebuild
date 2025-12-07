@@ -87,7 +87,7 @@ export default function HeroSection() {
           <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight drop-shadow-2xl">
             Teknik Informatika
           </motion.h1>
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-medium text-gray-200 tracking-tight leading-tight">
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-semibold text-gray-200 tracking-tight leading-tight">
             Universitas Hasanuddin
           </motion.h2>
         </motion.div>
@@ -102,18 +102,12 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Scroll Indicator */}
-      <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
-        style={{ opacity: scrollIndicatorOpacity }}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-white/60 text-sm tracking-widest uppercase">Gulir</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
-        </div>
-      </motion.div>
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        <span className="text-white/70 text-sm">Gulir untuk menjelajah</span>
+        <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
     </section>
   );
 }
