@@ -15,7 +15,7 @@ export default function Home() {
                     {/* Medium Image Container */}
                     <div className="relative w-[700px] h-[1000px] shadow-xl rounded-lg">
                         <Image
-                            src="/brosur.png"   // ganti sesuai nama file gambar kamu
+                            src="/brosur.png" 
                             alt="Brochure"
                             fill
                             className="object-cover rounded-lg shadow-lg"/>

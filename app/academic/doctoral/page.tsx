@@ -26,7 +26,7 @@ const curriculumData = {
     "It aims to provide technical competency and practical expertise, as well as scientific and scientific knowledge.",
     "Data science is the main component of the final assignment.",
   ],
-  image: "/image1.png", 
+  image: "/image.png", 
 };
 
 const ScientificFocusData = {
@@ -37,7 +37,7 @@ const ScientificFocusData = {
     "Internet of Things (IoT)",
     "Cybersecurity & Parallel Computing",
   ],
-  image: "/image1.png", 
+  image: "/image.png", 
 };
 
 const laboratoriesData = {
@@ -49,7 +49,7 @@ const laboratoriesData = {
     "Distributed Systems & Internet Security",
     "Advanced System Software & Ubiquity Computing",
   ],
-  image: "/image1.png", 
+  image: "/image.png", 
 };
 
 
@@ -61,20 +61,20 @@ const StudyLoadData = {
     "Normal: 6 semesters",
     "Maximum: 10 semesters",
   ],
-  image: "/image1.png", 
+  image: "/image.png", 
 };
 
     // --- Akhir Data Halaman ---
     const ProgramInfoPage = () => {
       return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 ">
       <Navbar />
       <section className="relative w-full pt-28 flex justify-center"></section>
       {/* Header mengikuti ukuran navbar */}
       <div className="w-[100%] mx-auto mt-6">
         <header 
           className="relative h-[450px] w-full overflow-hidden bg-cover bg-center"
-          style={{ backgroundImage: "url('/image24.png')" }}
+          style={{ backgroundImage: "url('/gedung-unhas.png')" }}
         >
           <div className="absolute inset-0 bg-custom-navy bg-opacity-70 flex items-center justify-center">
             <h1 className="text-6xl font-extrabold text-white tracking-widest text-center uppercase leading-tight">
