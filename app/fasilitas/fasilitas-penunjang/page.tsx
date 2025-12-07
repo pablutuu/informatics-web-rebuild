@@ -78,15 +78,6 @@ export default function OtherFacilitiesPage() {
         <div className="absolute inset-0 bg-linear-to-br from-[#0C1B43]/70 to-[#1e3a8a]/60" />
         
         <div className="relative h-full flex flex-col items-center justify-center px-6">
-          {/* Back Button */}
-          <button 
-            onClick={() => window.history.back()}
-            className="absolute top-8 left-8 flex items-center gap-2 text-white hover:text-white/80 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span className="text-sm font-medium">Kembali ke Fasilitas</span>
-          </button>
-
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
               Fasilitas Penunjang Lainnya
