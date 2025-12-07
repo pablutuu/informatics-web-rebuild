@@ -42,20 +42,20 @@ const InfoCard = ({ item }: { item: typeof infoItems[0] }) => {
     return (
         <Link href={`/info/${slug}`} className="block">
             <motion.div 
-                className="w-[400px] h-[500px] shrink-0 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer group hover:shadow-xl transition-all duration-300"
+                className="w-[325px] h-[440px] shrink-0 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer group hover:shadow-xl transition-all duration-300"
                 whileHover={{ y: -10, rotate: 2 }}
             >
-                <div className="h-[250px] overflow-hidden">
+                <div className="h-[210px] overflow-hidden">
                     <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <div className="p-8 flex flex-col gap-4">
-                    <span className="w-fit px-4 py-1.5 bg-[#E1E4F8] text-[#0C1B43] text-sm font-bold rounded-full">
+                <div className="p-6 flex flex-col gap-3">
+                    <span className="w-fit px-3 py-1 bg-[#E1E4F8] text-[#0C1B43] text-xs font-bold rounded-full">
                         {item.tag}
                     </span>
-                    <h3 className="text-xl font-bold text-[#0C1B43] line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-lg font-bold text-[#0C1B43] line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
                         {item.title}
                     </h3>
-                    <p className="text-gray-500 line-clamp-3">
+                    <p className="text-gray-500 text-sm line-clamp-3 leading-relaxed">
                         {item.desc}
                     </p>
                 </div>

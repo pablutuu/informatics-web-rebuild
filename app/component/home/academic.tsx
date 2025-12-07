@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { IoMdArrowForward } from 'react-icons/io';
 
@@ -28,6 +28,31 @@ export const Academic = () => {
         target: container,
         offset: ['start start', 'end end']
     });
+
+    // Global Background Transition
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        document.body.classList.add('theme-academic');
+                    } else {
+                        document.body.classList.remove('theme-academic');
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        if (container.current) {
+            observer.observe(container.current);
+        }
+
+        return () => {
+            document.body.classList.remove('theme-academic');
+            observer.disconnect();
+        };
+    }, []);
 
     const [activeProgram, setActiveProgram] = useState(0);
 
