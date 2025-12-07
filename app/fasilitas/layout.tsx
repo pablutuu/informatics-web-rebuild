@@ -18,8 +18,6 @@ export default function FasilitasLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        
-        <Footer />
       </div>
     </SmoothScroll>
   );
