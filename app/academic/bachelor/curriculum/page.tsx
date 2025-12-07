@@ -5,10 +5,14 @@ import ModalImage from "react-modal-image";
 import { ZoomIn } from 'lucide-react';
 import CurriculumTable from '@/component/academic/bachelor/CurriculumTable';
 import BachelorHero from '@/component/academic/bachelor/BachelorHero';
+import Navbar from '@/component/navbar';
+import Footer from '@/component/footer';
 
 export default function CurriculumPage() {
     return (
-        <main className="min-h-screen bg-gray-50 pb-20">
+        <>
+            <Navbar />
+            <main className="min-h-screen bg-gray-50 pb-20">
             {/* Hero Section */}
             <BachelorHero 
                 title={
@@ -64,5 +68,7 @@ export default function CurriculumPage() {
                 </section>
             </div>
         </main>
+        <Footer />
+        </>
     );
 }

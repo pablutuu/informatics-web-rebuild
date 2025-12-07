@@ -27,7 +27,7 @@ export default function BachelorPageContent() {
         imageSrc="/images/placeholder-card-bachelor.png"
         imageAlt="Students working on projects"
         imagePosition="right"
-        learnMoreLink="/akademik/bachelor/curriculum"
+        learnMoreLink="/academic/bachelor/curriculum"
       />
 
       {/* 4. Admission Requirement Section */}
