@@ -148,13 +148,13 @@ export default function DetailPage({ params }: { params: Promise<{ slug: string 
                         {/* Article Body - Enhanced Typography */}
                         <motion.div 
                             className="prose prose-lg prose-slate max-w-none 
-                            prose-headings:text-[#0C1B43] prose-headings:font-bold 
-                            prose-p:text-gray-600 prose-p:leading-relaxed
-                            prose-li:text-gray-600
-                            prose-strong:text-[#0C1B43] 
-                            prose-blockquote:border-l-[6px] prose-blockquote:border-[#0C1B43] 
+                            prose-headings:text-[#0B0B0BFF] prose-headings:font-bold 
+                            prose-p:text-gray-800 prose-p:leading-relaxed
+                            prose-li:text-gray-800
+                            prose-strong:text-[#0B0B0BFF] 
+                            prose-blockquote:border-l-[6px] prose-blockquote:border-[#0B0B0BFF] 
                             prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-6 
-                            prose-blockquote:rounded-r-xl prose-blockquote:not-italic prose-blockquote:font-medium prose-blockquote:text-[#0C1B43]"
+                            prose-blockquote:rounded-r-xl prose-blockquote:not-italic prose-blockquote:font-medium prose-blockquote:text-[#0B0B0BFF]"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3, duration: 0.6 }}
