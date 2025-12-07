@@ -78,7 +78,7 @@ export default function AccreditationSection() {
     >
       
       {/* --- HEADER --- */}
-      <div className="absolute top-10 md:top-16 left-0 w-full text-center z-30 px-4">
+      <div className="absolute top-18 md:top-24 left-0 w-full text-center z-30 px-4">
 
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-2">
             Akreditasi &<br/>
