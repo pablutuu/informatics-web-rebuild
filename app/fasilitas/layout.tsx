@@ -1,8 +1,9 @@
 'use client';
 
-import Navbar from '../component/navbar'; 
-import Footer from '../component/footer';
-import SmoothScroll from '../component/home/smooth-scroll';
+import Navbar from '../../component/navbar';
+import Footer from '../../component/footer';
+import SmoothScroll from '../../component/home/smooth-scroll';
+
 
 export default function FasilitasLayout({
   children,
