@@ -1,5 +1,7 @@
+"use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 interface AcademicSectionProps {
   title: string;
@@ -8,8 +10,37 @@ interface AcademicSectionProps {
 }
 
 export default function AcademicSection({ title, children, reversed = false }: AcademicSectionProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.3 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      // Check if element is below the viewport (scrolling up)
+      // When scrolling down, the element goes above the viewport (top < 0) - we keep it visible
+      // When scrolling up, the element goes below the viewport (top > 0) - we reset it
+      if (ref.current) {
+        const rect = (ref.current as HTMLElement).getBoundingClientRect();
+        if (rect.top > 0) {
+          controls.start("hidden");
+        }
+      }
+    }
+  }, [isInView, controls]);
+
   return (
-    <div className="w-full flex justify-center px-4 md:px-[73px] py-6">
+    <motion.div 
+      ref={ref}
+      className="w-full flex justify-center px-4 md:px-[73px] py-6"
+      initial="hidden"
+      animate={controls}
+      variants={{
+        hidden: { opacity: 0, x: reversed ? 100 : -100 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
+      }}
+    >
       <div className="w-full max-w-[1320px] bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm">
         <div 
           className={`flex flex-col gap-8 md:gap-16 items-center ${
@@ -29,6 +60,6 @@ export default function AcademicSection({ title, children, reversed = false }: A
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,26 +1,33 @@
-
+"use client";
 
 import AcademicHero from "@/component/academic/AcademicHero";
 import AcademicSection from "@/component/academic/AcademicSection";
 import ProgramCard from "@/component/academic/ProgramCard";
-import { BookOpen, FileText, Map } from "lucide-react";
+import { BookOpen, FileText, Map, X } from "lucide-react";
+import { useState } from "react";
+// @ts-ignore
+import Lightbox from "react-modal-image";
+import Image from "next/image";
 
 export default function AcademicPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [brochureImage, setBrochureImage] = useState("");
+
+  const handleBrochureClick = (imageUrl: string) => {
+    setBrochureImage(imageUrl);
+    setIsModalOpen(true);
+  };
+
   const s1Cards = [
     {
       title: "Program Information",
       icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
-      link: "/academic/bachelor/information", // Placeholder link
+      link: "/akademik/bachelor", // Placeholder link
     },
     {
       title: "PMB Brochure",
       icon: <FileText className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
-      link: "/academic/bachelor/brochure", // Placeholder link
-    },
-    {
-      title: "Leaflet",
-      icon: <Map className="w-8 h-8 md:w-10 md:h-10 text-slate-700" strokeWidth={1.5} />,
-      link: "/academic/bachelor/leaflet", // Placeholder link
+      onClick: () => handleBrochureClick("/images/brochure-bachelor.png"),
     },
   ];
 
@@ -69,14 +76,17 @@ export default function AcademicPage() {
 
         {/* Bachelor (S1) Section - Text Left, Cards Right */}
         <AcademicSection title="Bachelor (S1) Program Academic Information">
+          {/* Spacer to align 2 cards to the right on desktop */}
+          <div className="hidden md:block" aria-hidden="true" />
           {s1Cards.map((card, index) => (
-            <ProgramCard
-              key={index}
-              title={card.title}
-              icon={card.icon}
-              link={card.link}
-            />
-          ))}
+             <ProgramCard
+               key={index}
+               title={card.title}
+               icon={card.icon}
+               link={(card as any).link}
+               onClick={(card as any).onClick}
+             />
+           ))}
         </AcademicSection>
 
         {/* Master (S2) Section - Cards Left, Text Right */}
@@ -106,6 +116,16 @@ export default function AcademicPage() {
           ))}
         </AcademicSection>
       </main>
+
+      {/* Image Modal */}
+      {isModalOpen && brochureImage && (
+        <Lightbox
+          medium={brochureImage}
+          large={brochureImage}
+          alt="PMB Brochure"
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
 
 
     </div>
